@@ -1,2 +1,17 @@
 # php-cs-fixer-ruleset
 DavaHome Ruleset for php-cs-fixer
+
+# Usage
+
+**php_cs.php**
+```php
+<?php
+
+return \DavaHome\PhpCsFixer::createFromDir(__DIR__)->getRuleSet();
+```
+
+**php-cs-fixer.phar**
+```bash
+php php-cs-fixer.phar fix --config=php_cs.php --allow-risky=yes
+php php-cs-fixer.phar fix --dry-run --diff --config=php_cs.php --allow-risky=yes
+```
