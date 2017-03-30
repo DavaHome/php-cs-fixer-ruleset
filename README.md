@@ -13,6 +13,8 @@ php composer.phar require --dev davahome/php-cs-fixer-ruleset
 ```php
 <?php
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 return \DavaHome\PhpCsFixer::createFromDir(__DIR__)->getRuleSet();
 ```
 
