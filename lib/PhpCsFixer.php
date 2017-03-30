@@ -27,7 +27,11 @@ class PhpCsFixer
     {
         return Config::create()
             ->setRules($this->getRules())
-            ->setFinder($this->finder);
+            ->setFinder($this->finder)
+            ->setLineEnding("\n")
+            ->setCacheFile(__DIR__ . '/data/cache/.php_cs.cache')
+            ->setIndent('    ')
+            ->setRiskyAllowed(true);
     }
 
     /**
