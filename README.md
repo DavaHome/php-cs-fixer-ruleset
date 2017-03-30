@@ -1,6 +1,12 @@
 # php-cs-fixer-ruleset
 DavaHome Ruleset for php-cs-fixer
 
+# Installation
+
+```bash
+php composer.phar require --dev davahome/php-cs-fixer-ruleset
+```
+
 # Usage
 
 **php_cs.php**
