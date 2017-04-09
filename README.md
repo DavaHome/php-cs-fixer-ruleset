@@ -26,6 +26,21 @@ php php-cs-fixer.phar fix --dry-run --diff --config=php_cs.php
 
 # Examples
 
+**php_cs.php**
+```php
+<?php
+use DavaHome\PhpCsFixer;
+use PhpCsFixer\Finder;
+require_once __DIR__ . '/vendor/autoload.php';
+$finder = Finder::create()
+    ->in(__DIR__)
+    ->notPath('/^data/');
+return (new PhpCsFixer($finder))
+    ->getRuleSet()
+    ->setCacheFile(__DIR__ . '/data/cache/.php_cs.cache');
+```
+
+**php_cs.php**
 ```php
 <?php
 
@@ -45,4 +60,16 @@ return (new PhpCsFixer($finder))
     ->setIndent("\t")
     ->setRiskyAllowed(false)
     ->setUsingCache(true);
+```
+
+**composer.json**
+```json
+{
+    "scripts": {
+        "phpcs": [
+            "bash bin/php-cs-fixer.sh",
+            "php php-cs-fixer.phar fix --config=php_cs.php"
+        ]
+    }
+}
 ```
