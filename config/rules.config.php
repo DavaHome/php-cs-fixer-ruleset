@@ -91,4 +91,5 @@ return [
     'combine_consecutive_unsets'            => true,
     'ereg_to_preg'                          => true,
     'header_comment'                        => false,
+    'indentation_type'                      => true,
 ];
