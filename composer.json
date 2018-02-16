@@ -3,14 +3,11 @@
     "description": "The default ruleset of php-cs-fixer for all davahome projects",
     "type": "library",
     "scripts": {
-        "install-cs-fixer": "@php bin/install-php-cs-fixer.php",
-        "post-install-cmd": "@install-cs-fixer",
-        "post-update-cmd": "@install-cs-fixer",
-        "phpcs": "php php-cs-fixer.phar fix --config=php_cs.php"
+        "phpcs": [
+            "bash bin/php-cs-fixer.sh",
+            "@php php-cs-fixer.phar fix --config=php_cs.php"
+        ]
     },
-    "bin": [
-        "./bin/install-php-cs-fixer.php"
-    ],
     "autoload": {
         "classmap": [
             "lib/PhpCsFixer.php"
