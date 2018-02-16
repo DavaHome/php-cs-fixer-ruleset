@@ -12,8 +12,5 @@
         "classmap": [
             "lib/PhpCsFixer.php"
         ]
-    },
-    "suggest": {
-        "friendsofphp/php-cs-fixer": "The rulesets only work with php-cs-fixer"
     }
 }
