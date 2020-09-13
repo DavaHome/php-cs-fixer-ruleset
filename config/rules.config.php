@@ -78,7 +78,7 @@ return [
         'use' => 'echo',
     ],
     'no_short_bool_cast'                    => true,
-    'no_short_echo_tag'                     => true,
+    'no_short_echo_tag'                     => false,
     'no_trailing_comma_in_singleline_array' => true,
     'no_trailing_whitespace'                => true,
     'no_trailing_whitespace_in_comment'     => true,
